@@ -9,8 +9,8 @@
 package tests
 
 import (
-	"github.com/kavanahuang/config"
-	"github.com/kavanahuang/test"
+	"github.com/jucci1887/config"
+	"github.com/jucci1887/test"
 	"testing"
 )
 

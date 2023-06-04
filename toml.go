@@ -1,14 +1,14 @@
 /*
- Author: Kernel.Huang
- Mail: kernelman79@gmail.com
- File: config.go
- Date: 8/9/22 1:57 PM
+Author: Kernel.Huang
+Mail: kernelman79@gmail.com
+File: config.go
+Date: 8/9/22 1:57 PM
 */
 package config
 
 import (
 	"github.com/BurntSushi/toml"
-	"github.com/kavanahuang/system"
+	"github.com/jucci1887/system"
 	goToml "github.com/pelletier/go-toml"
 	"log"
 )
@@ -85,8 +85,8 @@ func (tf *TomlConfig) Fetch(key string) *TomlConfig {
 }
 
 /*
- The Fetch function alias
- Example: result := Tome.NewToml(dirname, filename).Zone("zoneName").Got("key").ToStr()
+The Fetch function alias
+Example: result := Tome.NewToml(dirname, filename).Zone("zoneName").Got("key").ToStr()
 */
 func (tf *TomlConfig) Got(key string) *TomlConfig {
 	tf.keyName = tf.keyName + "." + key
@@ -123,6 +123,7 @@ func (tf *TomlConfig) ToBool() bool {
 
 /*
 Example:
+
 	var structured structuredConfig
 	config.Toml.NewStructToml("config", "config.toml", &structured)
 */

@@ -7,9 +7,8 @@
 package config
 
 import (
-	"github.com/kavanahuang/common"
-	"github.com/kavanahuang/system"
-	"gopkg.in/yaml.v3"
+	"github.com/jucci1887/common"
+	"github.com/jucci1887/system"
 	"log"
 )
 
