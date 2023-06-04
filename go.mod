@@ -1,4 +1,4 @@
-module github.com/kavanahuang/config
+module github.com/jucci1887/config
 
 go 1.18
 
