@@ -127,7 +127,7 @@ Example:
 	var structured structuredConfig
 	config.Toml.NewStructToml("config", "config.toml", &structured)
 */
-func (tf *TomlConfig) NewStructToml(dirname string, filename string, structured any) any {
+func (tf *TomlConfig) NewStructToml(dirname string, filename string, structured interface{}) interface{} {
 	path := system.GetFilepath(dirname, filename)
 	_, err := toml.DecodeFile(path, structured)
 	if err != nil {
