@@ -28,12 +28,7 @@ func (yc *YamlConfig) NewYaml(dirname string, filename string) *YamlConfig {
 	return yc
 }
 
-/*
-Example:
-
-	var structured structuredConfig
-	config.Yaml.NewYaml("config", "config.toml").Parse(&structured)
-*/
+// Parse /*
 func (yc *YamlConfig) Parse(structured interface{}) interface{} {
 	err := yaml.Unmarshal(yc.cfg, structured)
 	if err != nil {
