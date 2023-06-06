@@ -1,14 +1,15 @@
 /*
- Author: Kernel.Huang
- Mail: kernelman79@gmail.com
- File: config.go
- Date: 8/9/22 1:57 PM
+Author: Kernel.Huang
+Mail: kernelman79@gmail.com
+File: config.go
+Date: 8/9/22 1:57 PM
 */
 package config
 
 import (
 	"github.com/jucci1887/common"
 	"github.com/jucci1887/system"
+	"gopkg.in/yaml.v3"
 	"log"
 )
 
@@ -29,10 +30,11 @@ func (yc *YamlConfig) NewYaml(dirname string, filename string) *YamlConfig {
 
 /*
 Example:
+
 	var structured structuredConfig
 	config.Yaml.NewYaml("config", "config.toml").Parse(&structured)
 */
-func (yc *YamlConfig) Parse(structured any) any {
+func (yc *YamlConfig) Parse(structured interface{}) interface{} {
 	err := yaml.Unmarshal(yc.cfg, structured)
 	if err != nil {
 		log.Println("Parse yaml file error: ", err)
